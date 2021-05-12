@@ -32,7 +32,7 @@ setnames(WIDA_HI_Data_LONG, old.names, new.names)
 
 ### Tidy up variables
 WIDA_HI_Data_LONG[,ID:=as.character(ID)]
-WIDA_HI_Data_LONG[,YEAR:=as.character(YEAR)]
+WIDA_HI_Data_LONG[,YEAR:=as.character(YEAR+1)]
 WIDA_HI_Data_LONG[,SCALE_SCORE:=as.numeric(SCALE_SCORE)]
 WIDA_HI_Data_LONG[,ACHIEVEMENT_LEVEL:=as.character(ACHIEVEMENT_LEVEL)]
 WIDA_HI_Data_LONG[!is.na(ACHIEVEMENT_LEVEL), ACHIEVEMENT_LEVEL:=paste("WIDA Level", ACHIEVEMENT_LEVEL)]
