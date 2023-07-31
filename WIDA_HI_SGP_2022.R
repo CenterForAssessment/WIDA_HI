@@ -1,6 +1,6 @@
 ##########################################################################################
 ###
-### Script for calculating SGPs for 2020-2021 WIDA/ACCESS Hawaii
+### Script for calculating SGPs for 2021-2022 WIDA/ACCESS Hawaii
 ###
 ##########################################################################################
 
@@ -10,15 +10,15 @@ require(SGP)
 
 ### Load Data
 load("Data/WIDA_HI_SGP.Rdata")
-load("Data/WIDA_HI_Data_LONG_2021.Rdata")
+load("Data/WIDA_HI_Data_LONG_2022.Rdata")
 
 ###   Add single-cohort baseline matrices to SGPstateData
-SGPstateData <- SGPmatrices::addBaselineMatrices("WIDA_HI", "2021")
+SGPstateData <- SGPmatrices::addBaselineMatrices("WIDA_HI", "2022")
 
 ### Run analyses
 WIDA_HI_SGP <- updateSGP(
 		WIDA_HI_SGP,
-		WIDA_HI_Data_LONG_2021,
+		WIDA_HI_Data_LONG_2022,
 		steps=c("prepareSGP", "analyzeSGP", "combineSGP", "visualizeSGP", "outputSGP"),
 		sgp.percentiles=TRUE,
 		sgp.projections=TRUE,
@@ -34,4 +34,4 @@ WIDA_HI_SGP <- updateSGP(
 
 
 ### Save results
-save(WIDA_HI_SGP, file="Data/WIDA_HI_SGP.Rdata")
+#save(WIDA_HI_SGP, file="Data/WIDA_HI_SGP.Rdata")
