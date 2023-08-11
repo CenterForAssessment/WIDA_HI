@@ -44,4 +44,4 @@ setkey(WIDA_HI_Data_LONG_2022, VALID_CASE, CONTENT_AREA, YEAR, ID)
 WIDA_HI_Data_LONG_2022[which(duplicated(WIDA_HI_Data_LONG_2022, by=key(WIDA_HI_Data_LONG_2022)))-1, VALID_CASE := "INVALID_CASE"]
 
 ### Save results
-#save(WIDA_HI_Data_LONG_2022, file="Data/WIDA_HI_Data_LONG_2022.Rdata")
+save(WIDA_HI_Data_LONG_2022, file="Data/WIDA_HI_Data_LONG_2022.Rdata")

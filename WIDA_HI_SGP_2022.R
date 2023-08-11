@@ -34,4 +34,4 @@ WIDA_HI_SGP <- updateSGP(
 
 
 ### Save results
-#save(WIDA_HI_SGP, file="Data/WIDA_HI_SGP.Rdata")
+save(WIDA_HI_SGP, file="Data/WIDA_HI_SGP.Rdata")
